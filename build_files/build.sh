@@ -35,6 +35,8 @@ dnf5 -y copr enable errornointernet/quickshell
 dnf5 -y copr disable errornointernet/quickshell
 dnf5 -y --enablerepo copr:copr.fedorainfracloud.org:errornointernet:quickshell install quickshell-git
 
+dnf5 -y copr enable avengemedia/danklinux
+dnf5 -y copr disable avengemedia/danklinux
 dnf5 -y copr enable avengemedia/dms-git
 dnf5 -y copr disable avengemedia/dms-git
 dnf5 -y \
