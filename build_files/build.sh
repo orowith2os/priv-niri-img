@@ -29,7 +29,7 @@ dnf5 -y copr enable yalter/niri-git
 dnf5 -y copr disable yalter/niri-git
 echo "priority=1" | tee -a /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:yalter:niri-git.repo
 dnf5 -y --enablerepo copr:copr.fedorainfracloud.org:yalter:niri-git install niri
-rm5 -rf /usr/share/doc/niri
+rm -rf /usr/share/doc/niri
 
 dnf5 -y copr enable errornointernet/quickshell
 dnf5 -y copr disable errornointernet/quickshell
