@@ -25,19 +25,19 @@ systemctl enable podman.socket
 
 # stolen from https://github.com/Matthias-adR/bizzite/blob/main/build_files/build.sh
 
-dnf -y copr enable yalter/niri-git
-dnf -y copr disable yalter/niri-git
+dnf5 -y copr enable yalter/niri-git
+dnf5 -y copr disable yalter/niri-git
 echo "priority=1" | tee -a /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:yalter:niri-git.repo
-dnf -y --enablerepo copr:copr.fedorainfracloud.org:yalter:niri-git install niri
-rm -rf /usr/share/doc/niri
+dnf5 -y --enablerepo copr:copr.fedorainfracloud.org:yalter:niri-git install niri
+rm5 -rf /usr/share/doc/niri
 
 dnf5 -y copr enable errornointernet/quickshell
 dnf5 -y copr disable errornointernet/quickshell
 dnf5 -y --enablerepo copr:copr.fedorainfracloud.org:errornointernet:quickshell install quickshell-git
 
-dnf -y copr enable avengemedia/dms-git
-dnf -y copr disable avengemedia/dms-git
-dnf -y \
+dnf5 -y copr enable avengemedia/dms-git
+dnf5 -y copr disable avengemedia/dms-git
+dnf5 -y \
     --enablerepo copr:copr.fedorainfracloud.org:avengemedia:dms-git \
     --enablerepo copr:copr.fedorainfracloud.org:avengemedia:danklinux \
     install --setopt=install_weak_deps=False \
