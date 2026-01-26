@@ -45,7 +45,8 @@ dnf5 -y \
     install --setopt=install_weak_deps=False \
     dms \
     dms-cli \
-    dms-greeter
+    dms-greeter \
+    noctalia-shell
 
 mkdir -p /etc/xdg/quickshell
 if [ -d /etc/xdg/quickshell/dms ]; then
