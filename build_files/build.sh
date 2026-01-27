@@ -31,21 +31,21 @@ echo "priority=1" | tee -a /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:yalt
 dnf5 -y --enablerepo copr:copr.fedorainfracloud.org:yalter:niri-git install niri
 rm -rf /usr/share/doc/niri
 
-dnf5 -y copr enable errornointernet/quickshell
-dnf5 -y copr disable errornointernet/quickshell
-dnf5 -y --enablerepo copr:copr.fedorainfracloud.org:errornointernet:quickshell install quickshell-git
+#dnf5 -y copr enable errornointernet/quickshell
+#dnf5 -y copr disable errornointernet/quickshell
+#dnf5 -y --enablerepo copr:copr.fedorainfracloud.org:errornointernet:quickshell install quickshell-git
 
-dnf5 -y copr enable avengemedia/danklinux
-dnf5 -y copr disable avengemedia/danklinux
-dnf5 -y copr enable avengemedia/dms-git
-dnf5 -y copr disable avengemedia/dms-git
-dnf5 -y \
-    --enablerepo copr:copr.fedorainfracloud.org:avengemedia:dms-git \
-    --enablerepo copr:copr.fedorainfracloud.org:avengemedia:danklinux \
-    install --setopt=install_weak_deps=False \
-    dms \
-    dms-cli \
-    dms-greeter
+#dnf5 -y copr enable avengemedia/danklinux
+#dnf5 -y copr disable avengemedia/danklinux
+#dnf5 -y copr enable avengemedia/dms-git
+#dnf5 -y copr disable avengemedia/dms-git
+#dnf5 -y \
+#    --enablerepo copr:copr.fedorainfracloud.org:avengemedia:dms-git \
+#    --enablerepo copr:copr.fedorainfracloud.org:avengemedia:danklinux \
+#    install --setopt=install_weak_deps=False \
+#    dms \
+#    dms-cli \
+#    dms-greeter
 
 curl -fsSL https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo | tee /etc/yum.repos.d/terra.repo
 dnf install -y terra-release noctalia-shell
