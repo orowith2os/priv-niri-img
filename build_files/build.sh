@@ -47,7 +47,7 @@ dnf5 -y \
     dms-cli \
     dms-greeter
 
-curl -fsSL https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo | pkexec tee /etc/yum.repos.d/terra.repo
+curl -fsSL https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo | tee /etc/yum.repos.d/terra.repo
 dnf -y terra-release noctalia-shell
 
 mkdir -p /etc/xdg/quickshell
