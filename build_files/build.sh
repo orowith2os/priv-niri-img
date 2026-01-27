@@ -47,7 +47,8 @@ dnf5 -y \
     dms-cli \
     dms-greeter
 
-dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' noctalia-shell
+curl -fsSL https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo | pkexec tee /etc/yum.repos.d/terra.repo
+dnf -y terra-release noctalia-shell
 
 mkdir -p /etc/xdg/quickshell
 if [ -d /etc/xdg/quickshell/dms ]; then
