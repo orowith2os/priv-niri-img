@@ -45,8 +45,9 @@ dnf5 -y \
     install --setopt=install_weak_deps=False \
     dms \
     dms-cli \
-    dms-greeter \
-    noctalia-shell
+    dms-greeter
+
+dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' noctalia-shell
 
 mkdir -p /etc/xdg/quickshell
 if [ -d /etc/xdg/quickshell/dms ]; then
