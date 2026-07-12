@@ -33,6 +33,11 @@ echo "priority=1" | tee -a /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:yalt
 dnf5 -y --enablerepo copr:copr.fedorainfracloud.org:yalter:niri-git install niri
 rm -rf /usr/share/doc/niri
 
+dnf copr enable -y rhcontainerbot/bootc
+dnf copr disable -y rhcontainerbot/bootc
+echo "priority=1" | tee -a /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:rhcontainerbot:bootc.repo
+dnf5 -y --enablerepo copr:copr.fedorainfracloud.org:rhcontainerbot:bootc install bootc
+
 #dnf5 -y copr enable errornointernet/quickshell
 #dnf5 -y copr disable errornointernet/quickshell
 #dnf5 -y --enablerepo copr:copr.fedorainfracloud.org:errornointernet:quickshell install quickshell-git
